@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  make: MyString
+  model: MyString
+  color: MyString
+  type: 
+  year: MyString
+  short_desc: MyString
+  long_desc: MyText
+  owner: MyString
+
+two:
+  make: MyString
+  model: MyString
+  color: MyString
+  type: 
+  year: MyString
+  short_desc: MyString
+  long_desc: MyText
+  owner: MyString

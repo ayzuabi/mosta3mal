@@ -1,8 +1,4 @@
 Mosta3mal::Application.routes.draw do
-  resources :owners
-
-  resources :cars
-
   get "home/index"
 
   # The priority is based upon order of creation:
