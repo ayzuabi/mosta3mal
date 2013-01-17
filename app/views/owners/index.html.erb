@@ -181,6 +181,34 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 <% end %>
 </table>
 
+Other Cars for this owner:
+<table align="center" width="80%" border=1>
+  <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Color</th>
+    <th>Type</th>
+    <th>Year</th>
+    <th>Short desc</th>
+    <th>Long desc</th>
+    <th>Owner</th>
+    <th></th>
+  </tr>
+
+<% @owner_cars.each do |car| %>
+  <tr align="center">
+    <td><%= car.make %></td>
+    <td><%= car.model %></td>
+    <td><%= car.color %></td>
+    <td><%= car.type %></td>
+    <td><%= car.year %></td>
+    <td><%= car.short_desc %></td>
+    <td><%= car.long_desc %></td>
+    <td><%= link_to car.owner, owners_path(:owner=>car.owner) %></td>
+    <td><%= link_to 'Show', car %></td>
+  </tr>
+<% end %>
+</table>
 <br />
 
 <%= link_to 'New Owner', new_owner_path %>

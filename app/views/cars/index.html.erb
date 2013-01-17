@@ -147,9 +147,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
     <p>&nbsp;</p>
     <!-- end .sidebar1 --></div>
   <div class="content">
-    
-    <p>Description</p>
-    <div class="container-b " >
+        <div class="container-b " align="center">
 	  <h2 >Find Used Cars</h2>
       <img src="images/car1.png" />
 
@@ -184,14 +182,14 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
       
      
        <input type="submit" value="search"></input>
-	<input type="submit" name="listall" value="listall"></input>
+<input type="submit" name="listall" value="listall"></input>
 	   
      </form>
 			
 	</div>
 <div>
     
-<table>
+<table align="center" width="80%" border=1>
   <tr>
     <th>Make</th>
     <th>Model</th>
@@ -202,12 +200,10 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
     <th>Long desc</th>
     <th>Owner</th>
     <th></th>
-
-    <th></th>
   </tr>
 
 <% @cars.each do |car| %>
-  <tr>
+  <tr align="center">
     <td><%= car.make %></td>
     <td><%= car.model %></td>
     <td><%= car.color %></td>
@@ -215,8 +211,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
     <td><%= car.year %></td>
     <td><%= car.short_desc %></td>
     <td><%= car.long_desc %></td>
-    <td><%= car.owner %></td>
-    <td><%= link_to car.owner, owners_path(:owner=>car.owner) %></td>
+    <td><%= link_to 'Contact Owner', owners_path(:owner=>car.owner) %></td>
     <td><%= link_to 'Show', car %></td>
   </tr>
 <% end %>
@@ -224,7 +219,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 
 <br />
 
-<%= link_to 'New Car', new_car_path %>
+<%= link_to 'Sell Your Car NOW !', new_car_path %>
     </div>
     
     </div>

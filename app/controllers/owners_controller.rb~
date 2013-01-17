@@ -4,8 +4,11 @@ class OwnersController < ApplicationController
   def index
 @all_models= Car.all_models
 @all_makes= Car.all_makes
+
+
     if (params[:owner] )
     @owners = Owner.find(:all,:conditions => { :name => params[:owner]})
+    @owner_cars= Car.find(:all,:conditions => { :owner => params[:owner]} )
     else
     @owners = Owner.all
     end

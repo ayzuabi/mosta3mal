@@ -46,6 +46,8 @@ end
   # GET /cars/new
   # GET /cars/new.json
   def new
+@all_models= Car.all_models
+@all_makes= Car.all_makes
     @car = Car.new
 
     respond_to do |format|
