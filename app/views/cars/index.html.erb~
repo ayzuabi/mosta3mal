@@ -182,7 +182,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
       
      
        <input type="submit" value="search"></input>
-<input type="submit" name="listall" value="listall"></input>
+<input type="submit" name="listall" value="List All"></input>
 	   
      </form>
 			
@@ -198,23 +198,24 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
     <th>Year</th>
     <th>Short desc</th>
     <th>Long desc</th>
-    <th>Owner</th>
+    <th>Owne1</th>
     <th></th>
   </tr>
 
 <% @cars.each do |car| %>
   <tr align="center">
-    <td><%= car.make %></td>
-    <td><%= car.model %></td>
-    <td><%= car.color %></td>
-    <td><%= car.type %></td>
-    <td><%= car.year %></td>
-    <td><%= car.short_desc %></td>
-    <td><%= car.long_desc %></td>
-    <td><%= link_to 'Contact Owner', owners_path(:owner=>car.owner) %></td>
-    <td><%= link_to 'Show', car %></td>
+    <td> <%= car.make %> </td>
+    <td> <%= car.model %> </td>
+    <td> <%= car.color %> </td>
+    <td> <%= car.type %> </td>
+    <td> <%= car.year %> </td>
+    <td> <%= car.short_desc %> </td>
+    <td> <%= car.long_desc %> </td>
+    <td> <%= link_to 'Contact Owner', owners_path(:owner=>car.owner) %> </td>
+    <td> <%= link_to 'Show', car %> </td>
   </tr>
 <% end %>
+
 </table>
 
 <br />

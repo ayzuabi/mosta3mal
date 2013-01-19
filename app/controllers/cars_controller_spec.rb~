@@ -1,0 +1,10 @@
+require 'spec_helper'
+ 
+describe CarsController do
+  describe 'index Listing' do
+    it 'it should list all cars in case listall button is selected' do
+	post :index, {:listall => 'listall'}
+	end
+    it 'it should perform search by car model or car make'
+  end
+end
