@@ -23,6 +23,7 @@ module NavigationHelpers
 
     when /^the car details page$/ then "/cars/#{Car.find_by_make('opel').id}"
 
+    when /^the owner details page$/ then "/owners"
 
 
     # Add more mappings here.

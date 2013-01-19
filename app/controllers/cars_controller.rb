@@ -35,6 +35,8 @@ end
   # GET /cars/1
   # GET /cars/1.json
   def show
+@all_models= Car.all_models
+@all_makes= Car.all_makes
     @car = Car.find(params[:id])
 
     respond_to do |format|
@@ -46,6 +48,7 @@ end
   # GET /cars/new
   # GET /cars/new.json
   def new
+
 @all_models= Car.all_models
 @all_makes= Car.all_makes
     @car = Car.new

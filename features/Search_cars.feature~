@@ -1,3 +1,5 @@
+
+
 Feature: search for used car by client
 
   As a usercar client
@@ -50,4 +52,17 @@ Scenario: show car information
   And  I follow "Show"
   Then I should be on the car details page
   And  I should see "astra"
+
+
+Scenario: show owner information
+  When I am on the mosta3mal home page
+  And  I select "opel" from "carmake" 
+  And  I press "search"
+  Then I should be on the mosta3mal home page
+  And  I follow "Contact Owner"
+  Then I should be on the owner details page
+  And  I should see "Ngharib"
+
+
+
 

@@ -18,6 +18,15 @@ cars = [{:make => 'Hyundai', :model => 'Matrix', :color => 'Silver', :type => 'A
 {:make => 'opel', :model => 'astra', :color => 'silver', :type => 'automatic', :year => '1999', :short_desc => 'good condition', :long_desc => '93,096', :owner => 'Ngharib'},
 ]
 
-cars.each do |car|
-  Car.create!(car)
+#cars.each do |car|
+#  Car.create!(car)
+
+
+
+owners = [{ :name => 'Ayzuabi', :address => 'Dokkia Giza', :phone => '+201001382838', :email => 'ayzuabi@hotmail.com'},
+{:name => 'Ngharib', :address => 'Haram Giza', :phone => '+20100012455', :email => 'ngharib@hotmail.com'}
+]
+
+owners.each do |owner|
+  Owner.create!(owner)
 end
