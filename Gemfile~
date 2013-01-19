@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
-
+gem 'pg'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -9,7 +9,7 @@ gem 'rails', '3.1.0'
 group :development, :test do
   gem 'rspec-rails'
   gem 'ZenTest'
-  gem 'pg'
+
 #  gem 'sqlite3'
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'database_cleaner'
