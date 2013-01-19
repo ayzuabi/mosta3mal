@@ -180,7 +180,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
   </tr>
 <% end %>
 </table>
-
+<% if @owner_cars  %>
 Other Cars for this owner:
 <table align="center" width="80%" border=1>
   <tr>
@@ -207,6 +207,7 @@ Other Cars for this owner:
     <td><%= link_to car.owner, owners_path(:owner=>car.owner) %></td>
     <td><%= link_to 'Show', car %></td>
   </tr>
+<% end %>
 <% end %>
 </table>
 <br />
